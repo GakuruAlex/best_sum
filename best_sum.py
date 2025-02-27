@@ -39,8 +39,7 @@ def best_sum_memo(target_sum: int, numbers: List[int], memo: Dict[int, List[int]
             current = [number] + result
             if shortest_list == None or len(shortest_list) > len(current):
                 shortest_list = current
-                memo[target_sum] = current
-
+    memo[target_sum] = shortest_list
     return shortest_list
 
 def main() -> None:
